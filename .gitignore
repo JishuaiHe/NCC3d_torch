@@ -3,3 +3,9 @@ FunctionTest/
 *.egg-info/
 *.so
 .git/
+*.so
+*.pyd
+build/
+*.egg-info
+src/kernel/ncc_cuda_lib_kernel.cu
+src/kernel/ncc_cuda_lib.cpp

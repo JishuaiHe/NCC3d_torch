@@ -5,6 +5,7 @@ import os
 os.path.dirname(os.path.abspath(__file__))
 # os.environ['TORCH_CUDA_ARCH_LIST'] = '7.5+PTX'
 
+
 setup(
     name='Ncc3d_torch',
     packages=find_packages(),
@@ -16,8 +17,8 @@ setup(
                                "src/kernel/ncc_cuda_naive.cpp",
                                "src/kernel/ncc_cuda_naive_kernel.cu"
                                ],
-                      extra_compie_args={'cxx': ['-g'],
-                                         'nvcc': ['-O2', '--extended-lambda']},
+                      extra_compile_args={'cxx': ['-g'],
+                                          'nvcc': ['-O2', '--extended-lambda']},
                       # TORCH_CUDA_ARCH_LIST="7.5 +PTX",
                       ),
                 ],

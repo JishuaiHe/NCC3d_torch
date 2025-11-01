@@ -16,7 +16,7 @@
 // Alternatively use an alias to avoid polluting the namespace with collective algorithms
 namespace cg = cooperative_groups;
 
-#include "./hpp/error_check.cuh"
+#include "../hpp/error_check.cuh"
 
 #define THREADS_PER_BLOCK 512
 #define WARP_SIZE 32
@@ -167,7 +167,7 @@ __global__ void ncc_cuda_forward_kernel(
 
 }
 
-torch::Tensor ncc_cuda_forward(
+torch::Tensor ncc_cuda_forward_naive(
     torch::Tensor z_block,
     torch::Tensor x_block
 ){
@@ -366,7 +366,7 @@ __global__ void ncc_cuda_backward_kernel(
 }
 
 
-std::vector<torch::Tensor> ncc_cuda_backward(
+std::vector<torch::Tensor> ncc_cuda_backward_naive(
     torch::Tensor g_xc_block,
     torch::Tensor z_block,
     torch::Tensor x_block
