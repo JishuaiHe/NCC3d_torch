@@ -1,4 +1,4 @@
-# PyTorch Extension of Normalization Cross Correlation
+# PyTorch Extension of 3D Normalization Cross Correlation
 
 ## Build
 ```python
