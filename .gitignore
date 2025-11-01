@@ -1,0 +1,5 @@
+FunctionTest/
+.vscode/
+*.egg-info/
+*.so
+.git/
